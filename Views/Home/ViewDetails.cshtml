@@ -1,0 +1,26 @@
+@model UsersModel
+@{
+    ViewBag.Title = "User Details";
+}
+
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.Name</h1>
+            </div>
+
+            <div class="card-body text-center">
+                <h4>ID : @Model.Id</h4>
+                <h4>Email : @Model.Email</h4>
+                <h4>Name : @Model.Name</h4>
+                <h4>Age : @Model.Age</h4>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Home" asp-action="GetAllData" class="btn btn-primary">Back</a>
+                <a asp-controller="Home" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+                <a asp-controller="Home" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

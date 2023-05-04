@@ -1,0 +1,33 @@
+# Visual Studio Code files
+.vscode/
+
+# NuGet packages directory
+**/packages/
+
+# MSTest Test Results
+TestResults/
+
+# Build results
+**/bin/
+**/obj/
+
+# Ignore the application's DLLs
+*.dll
+*.pdb
+*.exe
+
+# Ignore .user files
+*.user
+
+# Ignore .vs folder
+/.vs
+
+# Ignore Resharper files
+_ReSharper.*
+
+# Ignore StyleCop files
+StyleCop.Cache
+
+# Ignore Windows generated files
+ehthumbs.db
+Thumbs.db

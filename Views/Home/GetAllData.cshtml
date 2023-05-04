@@ -1,0 +1,36 @@
+﻿@model List<UsersModel>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th class="text-center">View</th>
+                <th class="text-center">Update</th>
+                <th class="text-center">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var users in Model)
+            {
+                <tr>
+                    <td>@users.Id</td>
+                    <td>@users.Name</td>
+                    <td>@users.Email</td>
+                    <td>@users.Age</td>
+                    <td class="text-center">
+                        <a asp-controller="Home" asp-action="ViewDetails" asp-route-id="@users.Id" class="btn btn-primary">View</a>
+                    </td>
+                    <td class="text-center">
+                        <a asp-controller="Home" asp-action="Edit" asp-route-id="@users.Id" class="btn btn-primary">Edit</a></td>
+                    <td class="text-center">
+                    <a asp-controller="Home" asp-action="Delete" asp-route-id="@users.Id"
+                         class="btn btn-danger">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
